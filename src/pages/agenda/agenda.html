@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Agenda</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <super-tabs [config]="{ sideMenu: 'left' }" tabsPlacement="bottom" scrollTabs="true" >
+      <super-tab [root]="tambauRoot" title="Tambaú" ></super-tab>
+      <super-tab [root]="bessaRoot" title="Bessa" ></super-tab>
+      <super-tab [root]="tabatingaRoot" title="Tabatinga" ></super-tab>
+      <super-tab [root]="tambabaRoot" title="Tambaba" ></super-tab>
+      <super-tab [root]="jacumaRoot" title="Jacumã" ></super-tab>
+      <super-tab [root]="lucenaRoot" title="Lucena" ></super-tab>
+      <super-tab [root]="manairaRoot" title="Manaíra" ></super-tab>
+      <super-tab [root]="oficinas_1Root" title="Oficinas 1" ></super-tab>
+      <super-tab [root]="oficinas_2Root" title="Oficinas 2" ></super-tab>
+      <super-tab [root]="expobotRoot" title="Expobot" ></super-tab>
+  </super-tabs>
+</ion-content>

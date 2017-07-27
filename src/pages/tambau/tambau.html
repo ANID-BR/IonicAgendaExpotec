@@ -5,10 +5,11 @@
 </ion-header>
 <ion-content>
   <ion-list>
-    <ion-item>
-      <h4 (click)="buttonClick()" >Teste de tdyusfgjsfg sdfhgsdkajfg asd sdkjfs dkjfh sdjkfh jlksd fhkhkhl</h4>
-      <p>13:00 - 14:00</p>
-      <ion-icon name="heart" isActive="false" item-end  (click)="AgendaPage.buttonClickStar();" ></ion-icon>
+    <ion-item *ngFor="let agenda of listaAgenda">
+      <h4 (click)="buttonClick()" >{{agenda.titulo}}</h4>
+      <p>{{agenda.hora_inicial}} - {{agenda.hora_final}}</p>
+      <ion-icon *ngIf="verificaFavorito(agenda.id)" name="star" item-end  (click)="buttonClickUnStar(agenda.id);" ></ion-icon>
+      <ion-icon *ngIf="!verificaFavorito(agenda.id)" name="star-outline" item-end  (click)="buttonClickStar(agenda.id);" ></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>

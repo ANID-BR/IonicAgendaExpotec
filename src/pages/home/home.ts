@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { InscritosPage } from '../inscritos/inscritos';
+import { AgendaPage } from '../agenda/agenda';
 
 @Component({
   selector: 'page-home',
@@ -19,8 +20,11 @@ export class HomePage {
       case 'inscritos':
         destino = InscritosPage;
       break;
+      case 'agenda':
+        destino = AgendaPage;
+      break;
     }
-    this.navC.push(InscritosPage);
+    this.navC.push(destino);
   }
 
 }

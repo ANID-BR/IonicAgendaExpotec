@@ -31,8 +31,6 @@ export class ServiceFavoritos {
 
   removeFavorito(idAgenda) {
     this.favs = this.favs.filter((fav) => {
-      console.info('fav', fav);
-      console.info('id_agenda', idAgenda);
       return fav != idAgenda;
     }, idAgenda);
     this.storage.set('favs', JSON.stringify(this.favs));

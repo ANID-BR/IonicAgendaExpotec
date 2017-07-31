@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Agenda
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Voltar</span>
+        <ion-icon name="md-close" showWhen="android, windows, cordova"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2>{{agenda.titulo}}</h2>
+  <p innerHtml="{{agenda.texto}}" ></p>
+</ion-content>

@@ -20,6 +20,8 @@ import { Oficinas_1Page } from '../pages/oficinas-1/oficinas-1';
 import { Oficinas_2Page } from '../pages/oficinas-2/oficinas-2';
 import { ExpobotPage } from '../pages/expobot/expobot';
 import { ServiceFavoritos } from '../pages/serviceFavoritos';
+import { ServiceAgenda } from '../pages/serviceAgenda';
+import { ModalAgenda } from '../pages/modal-agenda/modal-agenda';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -42,6 +44,7 @@ import { IonicStorageModule } from '@ionic/storage';
     Oficinas_1Page,
     Oficinas_2Page,
     ExpobotPage,
+    ModalAgenda,
   ],
   imports: [
     BrowserModule,
@@ -70,11 +73,13 @@ import { IonicStorageModule } from '@ionic/storage';
     Oficinas_1Page,
     Oficinas_2Page,
     ExpobotPage,
+    ModalAgenda,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     ServiceFavoritos,
+    ServiceAgenda,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
